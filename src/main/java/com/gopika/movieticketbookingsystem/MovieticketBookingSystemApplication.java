@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MovieticketBookingSystemApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MovieticketBookingSystemApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MovieticketBookingSystemApplication.class, args);
+    }
 
 }
