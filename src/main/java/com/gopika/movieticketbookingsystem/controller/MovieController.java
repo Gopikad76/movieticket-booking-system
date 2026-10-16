@@ -26,4 +26,13 @@ public class MovieController {
         System.out.println(movie.getTitle());
         return movieService.addmovies(movie);
     }
+    @PostMapping("/movies/{id}")
+    public Movie updateMovie(@PathVariable int id,@RequestBody Movie movie){
+        return movieService.updatemovies(id,movie);
+    }
+    @DeleteMapping("/movies/{id}")
+    public void deleteMovie(@PathVariable int id){
+        movieService.deletemovies(id);
+    }
+
 }
