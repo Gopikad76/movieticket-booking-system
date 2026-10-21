@@ -1,5 +1,5 @@
 package com.gopika.movieticketbookingsystem.service;
-import com.gopika.movieticketbookingsystem.model.Movie;
+
 import com.gopika.movieticketbookingsystem.repository.TheatreRepository;
 import org.springframework.stereotype.Service;
 import java.util.*;
@@ -21,5 +21,14 @@ public class TheatreService {
     public Optional<Theatre> theatreById(int n){
         return theatrerepo.findById(n);
     }
+    public void deletetheatre(int id){
+        theatrerepo.deleteById(id);
+    }
 
+    public Theatre updatetheatre(int id,Theatre theatre){
+        Theatre exist=theatrerepo.findById(id).orElseThrow(() -> new RuntimeException("theatre not found"));
+        exist.setName(theatre.getName());
+        exist.setLocation(theatre.getLocation());
+        return theatrerepo.save(exist);
+    }
 }

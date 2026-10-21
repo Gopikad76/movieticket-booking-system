@@ -14,14 +14,14 @@ public class Movie {
 
     private String title;
     private String genre;
-    private int minutes;
+    private Integer minutes;
 
     // No-argument constructor
     public Movie() {
     }
 
     // Parameterized constructor
-    public Movie(Integer id, String title, String genre,int minutes) {
+    public Movie(Integer id, String title, String genre,Integer minutes) {
         this.id = id;
         this.title = title;
         this.genre = genre;
@@ -41,7 +41,7 @@ public class Movie {
         return genre;
     }
 
-    public int getMinutes() {
+    public Integer getMinutes() {
         return minutes;
     }
 

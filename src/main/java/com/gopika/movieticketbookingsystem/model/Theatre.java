@@ -20,14 +20,14 @@ public class Theatre {
     }
     public Theatre() {
     }
-
+    public Integer getId(){ return id;}
     public String getName(){
         return name;
     }
-    public String getLoc(){
+    public String getLocation(){
         return location;
     }
-
+    public void setId(Integer id){ this.id=id;}
     public void setName(String name){
         this.name=name;
     }

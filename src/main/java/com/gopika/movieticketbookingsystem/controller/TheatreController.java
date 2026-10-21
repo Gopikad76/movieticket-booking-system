@@ -27,4 +27,13 @@ public class TheatreController {
         return theatreservice.theatreById(id);
     }
 
+    @DeleteMapping("/theatres/{id}")
+    public void deleteTheatre(@PathVariable int id){
+        theatreservice.deletetheatre(id);
+    }
+
+    @PutMapping("/theatres/{id}")
+    public Theatre updateTheatre(@PathVariable int id,@RequestBody Theatre theatre){
+        return theatreservice.updatetheatre(id,theatre);
+    }
 }
